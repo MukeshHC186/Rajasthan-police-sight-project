@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+       
+    </style>
+  </head>
+  <body>
+    <div class="main_cont">
+      <button id="add">+</button>
+      <span id="zero">0</span>
+      <button id="ded">-</button><br><br>
+      <span id="time"></span><br>
+      <span id="date"></span>
+    </div>
+
+  </body>
+  <script>
+    let num=0
+    let num1=document.getElementById("zero").innerHTML
+    document.getElementById("add").addEventListener("click",()=>{
+      num1=Number(num1+1)
+      Num.innerHTML=num1
+    })
+    // let num1 = 0;
+    // let num = document.getElementById("zero").innerHTML;
+    // function addfunction() {
+    //   num1 = Number(num1 + 1);
+    //   zero.innerText = num1;
+    //   console.log(num1);
+    // }
+    // let add = document.getElementById("add");
+    // add.addEventListener("click", addfunction);
+
+    
+    // function dedfunction() {
+    //   num1 = Number(num1 - 1);
+    //   zero.innerHTML = num1;
+    // }
+    // let ded = document.getElementById("ded");
+    // ded.addEventListener("click", dedfunction);
+
+    function mk(){
+      let mukesh=new Date().toLocaleTimeString()
+      let mukesh1=new Date().toLocaleDateString()
+
+      document.getElementById("time").innerHTML=mukesh
+      document.getElementById("date").innerHTML=mukesh1
+    }
+    
+    setInterval(mk,1000)
+  </script>
+</html>
